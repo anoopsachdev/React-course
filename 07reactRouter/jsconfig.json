@@ -1,0 +1,10 @@
+    {
+      "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2016",
+        "jsx": "preserve",
+        "baseUrl": "./src", // Adjust if your source files are in a different directory
+        "checkJs": true
+      },
+      "exclude": ["node_modules", "**/node_modules/*"]
+    }
