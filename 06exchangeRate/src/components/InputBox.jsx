@@ -24,6 +24,7 @@ function InputBox({
                   className="outline-none w-full bg-transparent py-1.5"
                   type="number"
                   placeholder="Amount"
+                  min = {0}
                   disabled = {amountDisable}
                   value = {amount}
                   onChange = {(e) => onAmountChange && onAmountChange(e.target.value)} // most of the time javascipt is notorius and e.target.value returns a string value
