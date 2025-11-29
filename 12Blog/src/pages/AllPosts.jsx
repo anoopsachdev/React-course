@@ -4,12 +4,14 @@ import appwriteService from "../appwrite/config";
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
-    useEffect(() => {}, [])
-    appwriteService.getPosts([]).then((posts) => {
-        if (posts) {
-            setPosts(posts.documents)
-        }
-    })
+    useEffect(() => {
+        // Move the API call INSIDE the useEffect
+        appwriteService.getPosts([]).then((posts) => {
+            if (posts) {
+                setPosts(posts.documents)
+            }
+        })
+    }, []) // The dependency array ensures this runs only once on mount
   return (
     <div className='w-full py-8'>
         <Container>
